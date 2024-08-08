@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "directory-documenter"
+version = "0.1.5"
+description = ""
+authors = ["Matthew Goldey <matthew.goldey@gmail.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4"
+langchain = "*"
+langchain-openai = "*"
+isort = "*"
+black = "*"
+fire = "*"
+pydantic-settings = "*"
+
+[tool.poetry.scripts]
+analyze_directory = "directory_documenter.analyze_directory:cli"
+document_directory = "directory_documenter.document_directory:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
